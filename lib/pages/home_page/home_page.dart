@@ -18,7 +18,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('HOME'),
-        centerTitle: true,
       ),
       body: Center(
         child: ElevatedButton(
