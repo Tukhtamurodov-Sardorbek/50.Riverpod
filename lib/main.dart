@@ -18,12 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          brightness: Brightness.dark,
-          secondary: const Color(0xff003909),
-        ),
+        primarySwatch: Colors.amber,
+        primaryColor: Colors.amber,
+        accentColor: Colors.amber,
+        brightness: Brightness.dark,
       ),
 
       home: const HomePage(),

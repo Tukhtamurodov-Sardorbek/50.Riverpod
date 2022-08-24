@@ -17,8 +17,10 @@ class CounterPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
+        // backgroundColor: Theme.of(context).primaryColor,
+        // foregroundColor: Colors.black,
         onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }
