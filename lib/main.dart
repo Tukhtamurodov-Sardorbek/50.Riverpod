@@ -4,6 +4,8 @@ import 'package:riverpod_learning/pages/home_page/home_page.dart';
 
 final counterProvider = StateProvider((ref) => 0);
 
+// * ProviderScope - is the only widget which wraps smth in Riverpod
+// * Everything is properly managed by the ProviderScope
 void main() => runApp(const ProviderScope(child: MyApp()));
 
 class MyApp extends StatelessWidget {
