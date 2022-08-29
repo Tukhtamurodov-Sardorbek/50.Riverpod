@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_learning/pages/counter_page_preserve/counter_page.dart';
-import 'package:riverpod_learning/pages/counter_page_reset/counter_page.dart';
+import 'package:riverpod_learning/pages/counter_page_reset/counter_page_auto.dart';
+import 'package:riverpod_learning/pages/counter_page_reset/counter_page_manually.dart';
 
 // * If we want to provide a string throughout the app using the Riverpod:
 // * Keep in mind! The object being provided by the provider is called state
@@ -38,13 +39,26 @@ class HomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('COUNTER PAGE RESET STATE'),
+              child: const Text('COUNTER PAGE AUTO-DISPOSE STATE'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: ((BuildContext context) =>
-                        const CounterPageResetState()),
+                        const CounterPageAutoDisposeState()),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('COUNTER PAGE DISPOSE STATE MANUALLY'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (
+                            (BuildContext context) => const CounterPageManuallyDisposeState()
+                    ),
                   ),
                 );
               },
