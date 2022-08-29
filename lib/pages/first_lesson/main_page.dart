@@ -1,61 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_mofiable_websocker.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_preservable_state.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_auto_disposable_state.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_dispose_manually.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_alerts.dart';
-import 'package:riverpod_learning/pages/counter_pages/counter_with_websocket.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_alerts.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_auto_disposable_state.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_dispose_manually.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_mofiable_websocker.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_preservable_state.dart';
+import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_websocket.dart';
 
-// * If we want to provide a string throughout the app using the Riverpod:
-// * Keep in mind! The object being provided by the provider is called state
-// * Declaration is Global, but the variable/state is NOT Global
-// * We can use this variable anywhere and get to its state from anywhere
-
-// * This is a basic standard Provider (unmodifiable)
-final myStringProvider = Provider((ref) => 'Hello World!');
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FirstLessonMainPage extends StatelessWidget {
+  const FirstLessonMainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('HOME'),
+        title: const Text('First Lesson'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ElevatedButton(
-              child: const Text('COUNTER WITH PRESERVE STATE'),
+              child: const FittedBox(
+                  child: Text('COUNTER WITH PRESERVABLE STATE'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: ((BuildContext context) =>
-                        const CounterPagePreserveState()),
+                    const CounterPagePreserveState()),
                   ),
                 );
               },
             ),
             ElevatedButton(
-              child: const Text('COUNTER WITH AUTO-DISPOSE STATE'),
+              child: const FittedBox(
+                child: Text('COUNTER WITH AUTO-DISPOSABLE STATE'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: ((BuildContext context) =>
-                        const CounterPageAutoDisposeState()),
+                    const CounterPageAutoDisposeState()),
                   ),
                 );
               },
             ),
             ElevatedButton(
-              child: const Text('COUNTER WITH DISPOSE STATE MANUALLY'),
+              child: const FittedBox(
+                child: Text('COUNTER WITH MANUALLY DISPOSED STATE'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -67,9 +65,11 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            const Divider(),
+            const Divider(thickness: 3),
             ElevatedButton(
-              child: const Text('COUNTER WITH ALERT'),
+              child: const FittedBox(
+                child: Text('COUNTER WITH ALERT'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -82,7 +82,9 @@ class HomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('COUNTER WITH WEBSOCKET'),
+              child: const FittedBox(
+                child: Text('COUNTER WITH WEBSOCKET'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -95,7 +97,9 @@ class HomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('COUNTER WITH MODIFIABLE WEBSOCKET'),
+              child: const FittedBox(
+                child: Text('COUNTER WITH MODIFIABLE WEBSOCKET'),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,

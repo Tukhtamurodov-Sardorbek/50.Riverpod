@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_learning/pages/home_page/home_page.dart';
+import 'package:riverpod_learning/pages/home_page.dart';
 
 // * ProviderScope - is the only widget which wraps smth in Riverpod
 // * Everything is properly managed by the ProviderScope
