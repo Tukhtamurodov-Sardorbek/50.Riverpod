@@ -39,7 +39,7 @@ class CounterPageWithAlert extends ConsumerWidget {
                 return AlertDialog(
                   title: const Text('Warning', textAlign: TextAlign.center),
                   content: const Text(
-                    '''Counter dangerously high (😂) \nConsider resetting it...''',
+                    '''Counter is dangerously high (😂) \nConsider resetting it...''',
                     textAlign: TextAlign.center,
                   ),
                   actions: [
