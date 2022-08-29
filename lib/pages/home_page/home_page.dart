@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_learning/pages/counter_page/counter_page.dart';
 
-// * If we want to provide a string throughout the app using riverpod
+// * If we want to provide a string throughout the app using the Riverpod:
 // * Keep in mind! The object being provided by the provider is called state
-// * The global nature of the provider declaration but the provider itself not being global
 // * Declaration is Global, but the variable/state is NOT Global
 // * We can use this variable anywhere and get to its state from anywhere
 
+// * This is a basic standard Provider (unmodifiable)
 final myStringProvider = Provider((ref) => 'Hello World!');
 
 class HomePage extends StatelessWidget {
@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('HOME'),
       ),
       body: Center(
