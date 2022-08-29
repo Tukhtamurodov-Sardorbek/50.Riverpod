@@ -37,7 +37,7 @@ class CounterPageWithModifiableWebSocket extends ConsumerWidget {
     // final Stream<int> counter = ref.watch(counterStreamProvider.stream);
 
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
         // FocusScope.of(context).unfocus();
       },
@@ -50,6 +50,14 @@ class CounterPageWithModifiableWebSocket extends ConsumerWidget {
           padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
+              const Text(
+                'Enter the starting point',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 8),
               TextField(
                 controller: ref.read(txtController),
                 style: const TextStyle(
@@ -64,21 +72,20 @@ class CounterPageWithModifiableWebSocket extends ConsumerWidget {
                   filled: true,
                   fillColor: Colors.amberAccent,
                 ),
-                onSubmitted: (txt){
+                onSubmitted: (txt) {
                   ref.read(initValueProvider.notifier).state = int.tryParse(ref.read(txtController).text) ?? 0;
+                  ref.read(txtController.notifier).state.text = '0';
                 },
               ),
               Expanded(
                 child: Center(
                   child: FittedBox(
                     child: Text(
-                      counter
-                          .when(
+                      counter.when(
                             data: (int value) => value,
                             error: (Object e, _) => e,
-                            loading: () => 0,
-                          )
-                          .toString(),
+                            loading: () => initValue,
+                          ).toString(),
                       style: Theme.of(context).textTheme.displayMedium,
                     ),
                   ),
