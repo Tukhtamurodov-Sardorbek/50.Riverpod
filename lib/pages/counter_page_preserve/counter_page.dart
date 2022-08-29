@@ -20,7 +20,7 @@ class CounterPagePreserveState extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('COUNTER'),
+        title: const Text('COUNTER PRESERVE'),
       ),
       body: Center(
         child: Text(

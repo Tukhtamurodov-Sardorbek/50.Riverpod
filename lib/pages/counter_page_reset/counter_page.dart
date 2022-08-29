@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// * The basic standard Provider (myStringProvider) is read only, we can't modify its value from outside
-// * But we want to be able to increment the integer, when a user presses floating action button
-// * So, it's not going to be just a provider, but another type of provider: StateProvider
+// * If we don't want to keep some expensive object forever, that takes up
+//   very much memory, disposing of things whenever they are no longer used is very handy
 
 // * In order to make the state just be reset whenever we go to the home page and then come back
-// * We just use the autoDispose modifier on our StateProvider
+//   we just use the autoDispose modifier on our StateProvider
 final counterProvider = StateProvider.autoDispose((ref) => 0);
+
 
 // * In order to get access to providers, we need to make our widgets into ConsumerWidget
 class CounterPageResetState extends ConsumerWidget {
@@ -22,7 +22,7 @@ class CounterPageResetState extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('COUNTER'),
+        title: const Text('COUNTER AUTO-DISPOSE'),
       ),
       body: Center(
         child: Text(
