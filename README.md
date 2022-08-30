@@ -7,3 +7,6 @@
 - Auto dispose
 - No memory leaks
 - Performance optimizations
+
+> Article: https://articles.wesionary.team/flutter-state-management-with-riverpod-bb73316d5469
+> First tutorial: https://youtu.be/Zp7VKVhirmw 

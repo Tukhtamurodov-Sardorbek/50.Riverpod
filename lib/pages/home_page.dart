@@ -39,6 +39,19 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+            ElevatedButton(
+              child: const Text('SECOND TUTORIAL'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (
+                            (BuildContext context) => const FirstLessonMainPage()
+                    ),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
