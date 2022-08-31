@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_alerts.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_auto_disposable_state.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_dispose_manually.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_mofiable_websocker.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_preservable_state.dart';
-import 'package:riverpod_learning/pages/first_lesson/counter_pages/counter_with_websocket.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_alerts.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_auto_disposable_state.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_dispose_manually.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_mofiable_websocker.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_preservable_state.dart';
+import 'package:riverpod_learning/pages/simple/counter_pages/counter_with_websocket.dart';
 
 class FirstLessonMainPage extends StatelessWidget {
   const FirstLessonMainPage({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class FirstLessonMainPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('First Lesson'),
+        title: const Text('SIMPLE USE CASES'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
