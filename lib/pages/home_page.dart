@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_learning/pages/first_lesson/main_page.dart';
+import 'package:riverpod_learning/pages/second_lesson/view.dart';
 
 // * If we want to provide a string throughout the app using the Riverpod:
 // * Keep in mind! The object being provided by the provider is called state
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (
-                            (BuildContext context) => const FirstLessonMainPage()
+                            (BuildContext context) => const CounterPage()
                     ),
                   ),
                 );
